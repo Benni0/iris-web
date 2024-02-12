@@ -69,6 +69,9 @@ COPY ./source .
 RUN chmod +x /iriswebapp/dependencies/evtxdump_binaries/linux/x64/fd
 RUN chmod +x /iriswebapp/dependencies/evtxdump_binaries/linux/x64/evtx_dump
 
+# OpenShift compat
+RUN chmod g+w /iriswebapp/app/static/assets/img/graph
+
 RUN chmod +x iris-entrypoint.sh
 RUN chmod +x wait-for-iriswebapp.sh
 #ENTRYPOINT [ "./iris-entrypoint.sh" ]
